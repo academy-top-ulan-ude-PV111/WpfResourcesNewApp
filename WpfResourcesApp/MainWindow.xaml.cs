@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,12 @@ namespace WpfResourcesApp
         public MainWindow()
         {
             InitializeComponent();
+            ((ArrayList)this.Resources["books"]).Add("Тургенев Отцы и дети");
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            this.Resources["brRed"] = Brushes.Blue;
         }
     }
 }

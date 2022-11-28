@@ -1,0 +1,21 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:sys="clr-namespace:System;assembly=System.Core"
+                    xmlns:coll="clr-namespace:System.Collections;assembly=netstandard"
+                    xmlns:local="clr-namespace:WpfResourcesApp">
+                    
+    <SolidColorBrush x:Key="brRed"
+                         Color="Red"/>
+    <LinearGradientBrush x:Key="brRedToGreen" 
+                             StartPoint="0,0"
+                             EndPoint="0,1">
+        <GradientStop Color="#234567" Offset="0.1"/>
+        <GradientStop Color="DarkRed" Offset="0.8"/>
+        <GradientStop Color="Red" Offset="1"/>
+    </LinearGradientBrush>
+    <coll:ArrayList x:Key="books">
+        <sys:String>Пушкин Руслан и Людмила</sys:String>
+        <sys:String>Толстой Война и мир</sys:String>
+        <sys:String>Достоевский Преступление и наказание</sys:String>
+    </coll:ArrayList>
+</ResourceDictionary>

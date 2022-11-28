@@ -4,24 +4,24 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfResourcesApp"
+        xmlns:sys="clr-namespace:System;assembly=System.Core"
+        xmlns:coll="clr-namespace:System.Collections;assembly=netstandard"
+        xmlns:gen="clr-namespace:System.Collections.Generic;assembly=netstandard"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Window.Resources>
-        <SolidColorBrush x:Key="brRed" Color="Red"/>
-        <LinearGradientBrush x:Key="brRedToGreen" 
-                             StartPoint="0,0"
-                             EndPoint="0,1">
-            <GradientStop Color="#234567" Offset="0.1"/>
-            <GradientStop Color="DarkRed" Offset="0.8"/>
-            <GradientStop Color="Red" Offset="1"/>
-        </LinearGradientBrush>
+        
+        <ResourceDictionary Source="Dictionary1.xaml"/>
+            
     </Window.Resources>
     <StackPanel>
-        <!--
+        
         <Button Content="Button1"
-            Background="{StaticResource brRed}"/> -->
+            Background="{StaticResource brRed}"/>
         <Button Content="Button2"
                 Height="100"
-            Background="{StaticResource brRedToGreen}"/>
+                Background="{DynamicResource brRed}"
+                Click="Button_Click"/>
+        <ListBox ItemsSource="{StaticResource books}"/>
     </StackPanel>
 </Window>
